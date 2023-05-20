@@ -10,3 +10,20 @@ func Parse(s string) (ID, error) {
 	}
 	return ID(x), nil
 }
+
+// ParseSlice parses multiple values
+func ParseSlice(slice []string) (out []ID, err error) {
+	if len(slice) == 0 {
+		return
+	}
+
+	var u ID
+	for _, s := range slice {
+		u, err = Parse(s)
+		if err != nil {
+			return nil, err
+		}
+		out = append(out, u)
+	}
+	return
+}
