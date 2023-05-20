@@ -1,0 +1,12 @@
+# IDE
+/.idea/
+/*.iml
+
+# Development
+/dev/
+/*.ini
+/*.yaml
+/*.yml
+/*.json
+/*.txt
+/*.log
