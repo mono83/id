@@ -5,10 +5,13 @@ import (
 	"strconv"
 )
 
+const Zero ID = ID(0)
+
 // ID is a type to represent incremental identifier
 // in database
 type ID uint64
 
+func (i ID) IsZero() bool   { return i == 0 }
 func (i ID) Uint64() uint64 { return uint64(i) }
 func (i ID) String() string { return strconv.FormatUint(i.Uint64(), 10) }
 
